@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "acb4bad6-fbce-4bf1-97a0-664acbd4f653",
+		"name": "ASPNET_Movies_WebAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31184245"
+	},
+	"item": [
+		{
+			"name": "Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5035/api/Movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5035",
+					"path": [
+						"api",
+						"Movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5035/api/Movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5035",
+					"path": [
+						"api",
+						"Movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Title\": \"Enders Game\",\r\n    \"RunningTime\": 114,\r\n    \"Genre\": \"Action\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5035/api/Movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5035",
+					"path": [
+						"api",
+						"Movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
