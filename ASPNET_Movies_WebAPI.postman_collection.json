@@ -12,12 +12,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5035/api/Movies",
-					"protocol": "http",
+					"raw": "https://localhost:7151/api/Movies",
+					"protocol": "https",
 					"host": [
 						"localhost"
 					],
-					"port": "5035",
+					"port": "7151",
 					"path": [
 						"api",
 						"Movies"
@@ -32,15 +32,16 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5035/api/Movies",
-					"protocol": "http",
+					"raw": "https://localhost:7151/api/Movies/1",
+					"protocol": "https",
 					"host": [
 						"localhost"
 					],
-					"port": "5035",
+					"port": "7151",
 					"path": [
 						"api",
-						"Movies"
+						"Movies",
+						"1"
 					]
 				}
 			},
@@ -53,7 +54,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"Title\": \"Enders Game\",\r\n    \"RunningTime\": 114,\r\n    \"Genre\": \"Action\"\r\n}",
+					"raw": "{\r\n    \"Title\": \"Avengers End Game\",\r\n    \"RunningTime\": 181,\r\n    \"Genre\": \"Action\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -61,12 +62,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5035/api/Movies",
-					"protocol": "http",
+					"raw": "https://localhost:7151/api/Movies",
+					"protocol": "https",
 					"host": [
 						"localhost"
 					],
-					"port": "5035",
+					"port": "7151",
 					"path": [
 						"api",
 						"Movies"
@@ -78,16 +79,60 @@
 		{
 			"name": "Delete",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7151/api/Movies/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7151",
+					"path": [
+						"api",
+						"Movies",
+						"2"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "Update",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Title\": \"Enders Game\",\r\n    \"RunningTime\": 115,\r\n    \"Genre\": \"Action\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7151/api/Movies/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7151",
+					"path": [
+						"api",
+						"Movies",
+						"1"
+					]
+				}
 			},
 			"response": []
 		}

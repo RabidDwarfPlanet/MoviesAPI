@@ -49,12 +49,15 @@ namespace MoviesAPI.Controllers
         {
             var movie = _context.Movies.Where(m => m.Id == id).SingleOrDefault();
             if (movie == null) { return NotFound(); }
-            if (movie.Title != updatedMovie.Title) { movie.Title = updatedMovie.Title; }
-            if (movie.RunningTime != updatedMovie.RunningTime) { movie.RunningTime = updatedMovie.RunningTime; }
-            if (movie.Genre != updatedMovie.Genre) { movie.Genre = updatedMovie.Genre; }
-            _context.Movies.Update(movie);
-            _context.SaveChanges();
-            return Ok(movie);
+            else
+            {
+                if (movie.Title != updatedMovie.Title) { movie.Title = updatedMovie.Title; }
+                if (updatedMovie.RunningTime != null) { movie.RunningTime = updatedMovie.RunningTime; }
+                if (movie.Genre != updatedMovie.Genre) { movie.Genre = updatedMovie.Genre; }
+                _context.Movies.Update(movie);
+                _context.SaveChanges();
+                return Ok(movie);
+            }
         }
 
         // DELETE api/<MoviesController>/5
